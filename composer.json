@@ -1,0 +1,15 @@
+{
+    "name": "lenovo/automasi",
+    "autoload": {
+        "psr-4": {
+            "Lenovo\\Automasi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "LuthfiaHasan",
+            "email": "luthfiahasana853@gmail.com"
+        }
+    ],
+    "require": {}
+}
