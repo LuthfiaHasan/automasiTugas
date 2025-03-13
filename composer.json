@@ -11,5 +11,7 @@
             "email": "luthfiahasana853@gmail.com"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "laravel/pint": "^1.21"
+    }
 }
