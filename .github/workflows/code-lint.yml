@@ -1,0 +1,33 @@
+name: Laravel Code Linting
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint:
+    name: Run Laravel Pint Linter
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set Up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.1
+          tools: composer
+
+      - name: Install Dependencies
+        run: composer install --no-progress --prefer-dist
+
+      - name: Install Laravel Pint
+        run: composer require laravel/pint --dev
+
+      - name: Run Laravel Pint
+        run: ./vendor/bin/pint --test
